@@ -1,0 +1,44 @@
+fn add(a: &mut i32, b: &mut i32) {
+  *a = *a + *b;
+}
+
+fn subtract(a: &mut i32, b: &mut i32) {
+  *a = *a - *b;
+}
+
+fn multiply(a: &mut i32, b: &mut i32) {
+  *a = *a * *b;
+}
+
+fn divide(a: &mut i32, b: &mut i32) {
+  *a = *a / *b;
+}
+
+fn main() {
+  let mut num1 = 10;
+  let mut num2 = 5;
+
+  println!("Numbers before calculation:");
+  println!("num1: {}", num1);
+  println!("num2: {}", num2);
+
+  add(&mut num1, &mut num2);
+  println!("Addition:");
+  println!("num1: {}", num1);
+  println!("num2: {}", num2);
+
+  subtract(&mut num1, &mut num2);
+  println!("Subtraction:");
+  println!("num1: {}", num1);
+  println!("num2: {}", num2);
+
+  multiply(&mut num1, &mut num2);
+  println!("Multiplication:");
+  println!("num1: {}", num1);
+  println!("num2: {}", num2);
+
+  divide(&mut num1, &mut num2);
+  println!("Division:");
+  println!("num1: {}", num1);
+  println!("num2: {}", num2);
+}
