@@ -1,0 +1,133 @@
+struct Student {
+    name: String,
+    email: String,
+    phno: String,
+    id: u32,
+}
+
+fn main() {
+    let mut students: Vec<Student> = Vec::new();
+
+    // Adding student details
+    students.push(Student {
+        name: String::from("John Doe"),
+        email: String::from("john@example.com"),
+        phno: String::from("123-456-7890"),
+        id: 1001,
+    });
+
+    students.push(Student {
+        name: String::from("Jane Smith"),
+        email: String::from("jane@example.com"),
+        phno: String::from("987-654-3210"),
+        id: 1002,
+    });
+
+    students.push(Student {
+        name: String::from("Alice Johnson"),
+        email: String::from("alice@example.com"),
+        phno: String::from("555-123-4567"),
+        id: 1003,
+    });
+
+    students.push(Student {
+        name: String::from("Bob Brown"),
+        email: String::from("bob@example.com"),
+        phno: String::from("999-888-7777"),
+        id: 1004,
+    });
+
+    students.push(Student {
+        name: String::from("Eve Davis"),
+        email: String::from("eve@example.com"),
+        phno: String::from("111-222-3333"),
+        id: 1005,
+    });
+
+    // Accessing student details with error handling
+    match get_student_details(&students, 2) {
+        Ok(student) => {
+            println!("Student Name: {}", student.name);
+            println!("Student Email: {}", student.email);
+            println!("Student Phone: {}", student.phno);
+            println!("Student ID: {}", student.id);
+        }
+        Err(err) => {
+            eprintln!("Error: {}", err);
+        }
+    }
+}
+
+fn get_student_details(students: &[Student], index: usize) -> Result<&Student, String> {
+    if let Some(student) = students.get(index) {
+        Ok(student)
+    } else {
+        Err(String::from("Invalid index"))
+    }
+}struct Student {
+    name: String,
+    email: String,
+    phno: String,
+    id: u32,
+}
+
+fn main() {
+    let mut students: Vec<Student> = Vec::new();
+
+    // Adding student details
+    students.push(Student {
+        name: String::from("John Doe"),
+        email: String::from("john@example.com"),
+        phno: String::from("123-456-7890"),
+        id: 1001,
+    });
+
+    students.push(Student {
+        name: String::from("Jane Smith"),
+        email: String::from("jane@example.com"),
+        phno: String::from("987-654-3210"),
+        id: 1002,
+    });
+
+    students.push(Student {
+        name: String::from("Alice Johnson"),
+        email: String::from("alice@example.com"),
+        phno: String::from("555-123-4567"),
+        id: 1003,
+    });
+
+    students.push(Student {
+        name: String::from("Bob Brown"),
+        email: String::from("bob@example.com"),
+        phno: String::from("999-888-7777"),
+        id: 1004,
+    });
+
+    students.push(Student {
+        name: String::from("Eve Davis"),
+        email: String::from("eve@example.com"),
+        phno: String::from("111-222-3333"),
+        id: 1005,
+    });
+
+    // Accessing student details with error handling
+    match get_student_details(&students, 2) {
+        Ok(student) => {
+            println!("Student Name: {}", student.name);
+            println!("Student Email: {}", student.email);
+            println!("Student Phone: {}", student.phno);
+            println!("Student ID: {}", student.id);
+        }
+        Err(err) => {
+            eprintln!("Error: {}", err);
+        }
+    }
+}
+
+fn get_student_details(students: &[Student], index: usize) -> Result<&Student, String> {
+    if let Some(student) = students.get(index) {
+        Ok(student)
+    } else {
+        Err(String::from("Invalid index"))
+    }
+}
